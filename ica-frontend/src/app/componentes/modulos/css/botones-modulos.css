@@ -1,0 +1,43 @@
+div.contenedor-modulos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+    animation-name: login;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+.square {
+    border-radius: 10px;
+    width: 300px; 
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(149, 31, 43, 0.50) 0%, rgba(42, 73, 255, 0.50) 100%);
+    box-shadow: 6px 10px 10px 6px black;
+    font-size: 100px;
+}
+
+
+
+p.nombreBtn {
+    font-family: 'Mulish', sans-serif;
+    font-style: bold;
+    font-size: 36px;
+}
+
+h1.bienvenida {
+    text-align: center;
+    margin: 50px;
+    opacity: 0;
+    animation-name: login;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+       

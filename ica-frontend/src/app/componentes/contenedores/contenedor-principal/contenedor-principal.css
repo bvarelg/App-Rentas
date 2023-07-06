@@ -1,0 +1,172 @@
+div.contenedor-principal{
+    
+    /* height: 100vh; */
+    margin: 5%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent !important;
+    font-family: 'Mulish', sans-serif;
+    opacity: 0;
+    animation-name: login;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+    
+
+
+
+@keyframes login{
+    0%{
+        opacity: 0;
+        transform: scale(1.2) translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) translate(0);
+    }
+}
+
+h1.Titulo {
+    position: relative;
+    width: 613px;
+    height: 45px;
+    text-align: center;   
+    top: 1%;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 700px;
+    font-size: 36px;
+    line-height: 45px;
+    color: #FFFFFF;
+    
+
+}
+
+label.Correo{
+    padding-left: 2%;
+    color: #FFFFFF;
+    font-weight: bold;
+    
+}
+
+label.Contrasena{
+    padding-left: 2%;
+    color: #FFFFFF;
+    font-weight: bold;
+    
+}
+
+a.recuperarContrasena{
+    padding-left: 45%;
+    font-family: 'Mulish', sans-serif;
+    font-weight: lighter;
+    font-size: small;
+    color: black;
+    
+    
+}
+
+div.inputTexto{
+    position: relative;
+    width: 500px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid slategray;
+}
+    
+
+input {
+    font-family: 'Mulish', sans-serif;
+    text-align: start;
+    font-size: 16px;
+}
+
+a.crearCuenta{
+    padding-left: 32%;
+    font-family: 'Mulish', sans-serif;
+    font-weight: normal;
+    font-size: small;
+    color: black;
+}
+
+a.politicas{
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: normal;
+    font-size: small;
+    color: black;
+}
+
+@media (max-width:540px){
+
+    div.contenedor-principal{
+        height: 50vh;
+        margin: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.inputTexto{
+        font-size: 12px;
+        width: 250px;
+        height: 30px;
+        
+    }
+
+    h1.Titulo{
+        font-size: 20px;
+    }
+
+    label.Correo{
+        font-weight: normal;
+        font-size: 14px;
+    }
+    
+    label.Contrasena{
+        font-weight: normal;
+        font-size: 14px;
+    }
+    
+    a.recuperarContrasena{
+        padding-left: 10%;
+        font-weight: lighter;
+        font-size: 10px;
+    }
+    
+    a.crearCuenta{
+        padding-left: 27%;
+        font-weight: lighter;
+        font-size: 10px;
+        
+    }
+        
+    a.politicas{
+        padding-top: 10%;
+        padding-left: 10px;
+        font-weight: lighter;
+        font-size: 9px;
+    }
+       
+        
+}
+
+@media (max-height:440px){
+    
+    h1.Titulo {
+        margin-top: 20%;        
+    
+    }
+
+    a.politicas{
+        color: transparent;
+        
+    }
+}
+    

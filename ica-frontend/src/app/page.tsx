@@ -1,68 +1,33 @@
 "use client";
-import React, { Fragment, useState } from "react";
-import axios from "axios";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "@/pages/login";
+import Home from "@/pages/home";
+import Recuperacion from "@/pages/recuperacion";
+import Register from "@/pages/register";
+import InicioInscripciones from "./componentes/paginas/inicio-inscripciones";
+import InicioDeclaraciones from "./componentes/paginas/inicio-declaraciones";
+import RegistroAtenciones from "./componentes/formularios/registro-atenciones";
+import InicioTaquilla from "./componentes/paginas/iniciotaquilla";
+import ReporteAtenciones from "./componentes/paginas/reporteatenciones";
 
-const Formulario = () => {
-  const [datos, setDatos] = useState({
-    firstName: "",
-    lastName: "",
-  });
 
-  const handleInputChange = (event) => {
-    setDatos({
-      ...datos,
-      [event.target.name]: event.target.value,
-    });
-  };
 
-  const enviarDatos = (event) => {
-    event.preventDefault();
-    axios
-      .post("http://localhost:3001/users", datos)
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    console.log(datos);
-  };
 
+export default function App() {
   return (
-    <Fragment>
-      <h1>Formulario</h1>
-      <form className="row" onSubmit={enviarDatos}>
-        <div className="col-md-3">
-          <input
-            type="text"
-            placeholder="Nombre"
-            className="form-control"
-            onChange={handleInputChange}
-            name="firstName"
-          ></input>
-        </div>
-
-        <div className="col-md-3">
-          <input
-            type="text"
-            placeholder="Apellido"
-            className="form-control"
-            onChange={handleInputChange}
-            name="lastName"
-          ></input>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Enviar
-        </button>
-      </form>
-      <ul>
-        <li>{datos.firstName}</li>
-        <li>{datos.lastName}</li>
-      </ul>
-    </Fragment>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/recuperacion" element={<Recuperacion />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/taquilla-ica" element={<InicioTaquilla />} />
+        <Route path="/inscripciones" element={<InicioInscripciones />} />
+        <Route path="/declaraciones" element={<InicioDeclaraciones />} />
+        <Route path="/atenciones" element={<RegistroAtenciones />} />
+        <Route path="/reportes" element={<ReporteAtenciones /> } />
+      </Routes>
+    </BrowserRouter>
   );
-};
-
-export default function Home() {
-  return <Formulario />;
 }

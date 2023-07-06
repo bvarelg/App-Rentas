@@ -1,0 +1,74 @@
+div.reg-atenciones {
+    display: grid;
+    grid-template-columns: max-content auto;
+    margin-left: 0px;
+    overflow: auto;
+}
+
+div.formulario form {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    margin-top: 5%;
+    
+}
+
+div.col1 {
+    padding: 10px;
+}
+
+div.col2 {
+    padding: 10px;
+}
+
+div.col3 {
+    margin-left: 55%;
+    margin-top: 20%;
+}
+
+label.inputs {
+    font-family: 'Mulish' sans-serif;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+form.form input {
+    border-radius: 6px;
+    border: darkgray solid 1px;
+    height: 40px;
+    width: 250px;
+    
+}
+
+select {
+    border-radius: 6px;
+    border-color: darkgrey;
+    height: 40px;
+    width: 250px;
+}
+
+
+h1.titulo {
+    text-align: center;
+    font-family: 'Mulish' sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+textarea.descripcion {
+    width: 250px;
+    height: 100px;
+    border-radius: 6px;
+    border: darkgray 1px solid;
+    
+}
+
+div.boton input {
+    
+    color: white !important;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    background: var(--primary, linear-gradient(180deg, #3969FC 0%, #2A49FF 100%));
+}

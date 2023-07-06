@@ -1,0 +1,116 @@
+div.sidebar-header {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+
+div.logo {
+    position: block;
+    margin: 10px;
+}
+
+
+div.appRentas {
+    font-family: 'Mulish' sans-serif;
+    color: white;
+}
+    
+
+ul {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li a:hover {
+    cursor: pointer;
+    border: 1px solid transparent !important;
+}
+
+ul li i{
+    font-size: x-large;
+}
+
+div.grid {
+    display: grid;
+    grid-template-columns: max-content auto;
+    margin-left: 0px;
+    
+}
+
+div.sidebar {
+    background: linear-gradient(180deg,
+            #012677 4.17%,
+            rgba(250, 47, 1, 0.205) 98.67%);
+    justify-content: space-evenly;
+    
+    padding: 0px;
+    height: 100vh;
+    overflow: auto;
+}
+
+div.menus {
+    margin-top: 30%;
+    font-family: "Mulish" sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.menus li {
+    margin: 10px 10px 20px 0px;
+}
+
+div.home {
+    margin: 50px 0px 0px 0px;
+}
+
+div.home:hover {
+    border: 2px solid transparent !important;
+    cursor: pointer;
+}
+
+div.home i {
+    color: white;
+    font-family: "Mulish" sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+div.home span {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.cerrar-sesión {
+    position: block !important;
+    margin: auto;
+    margin-top: 0px;
+    margin-left: 1px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+        
+}
+
+div.cerrar-sesión i {
+    color: white;
+    font-family: "Mulish" sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    margin-left: 2px;
+    
+}
+
+div.cerrar-sesión:hover {
+    border: 2px solid transparent !important;
+    cursor: pointer;
+}
+
+@media (max-width:575px) {
+    div.appRentas {
+        display: none;
+    }
+
+}

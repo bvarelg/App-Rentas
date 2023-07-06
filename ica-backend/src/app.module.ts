@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { UsersModule } from './users/users.module';
+import { UsuariosModule } from './usuarios/usuarios.module';
+import { RolesModule } from './roles/roles.module';
+import { AutenticacionModule } from './autenticacion/autenticacion.module';
+import { AtencionesModule } from './atenciones/atenciones.module';
 
 @Module({
   imports: [
@@ -14,7 +17,12 @@ import { UsersModule } from './users/users.module';
       autoLoadModels: true,
       synchronize: true,
     }),
-    UsersModule,
+    UsuariosModule,
+    RolesModule,
+    AutenticacionModule,
+    AtencionesModule,
   ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

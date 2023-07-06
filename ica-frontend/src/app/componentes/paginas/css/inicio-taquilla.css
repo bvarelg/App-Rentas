@@ -1,0 +1,25 @@
+div.contenido {
+    display: block !important;
+    justify-content: center;
+    position: relative !important;
+    margin: 0% 20% 0% 40%;
+    
+}
+    
+h1.funcionario {
+       
+    font-family: 'Mulish' sans-serif;
+}
+
+div.identificador-log {
+    
+    position: block;
+    display: inline-block;
+    margin-left: auto !important;
+    margin-top: 20px;
+    
+}
+
+
+    
+    

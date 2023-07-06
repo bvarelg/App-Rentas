@@ -1,0 +1,16 @@
+button {
+    height: 40px;
+    width: 500px;
+    background: var(--primary, linear-gradient(180deg, #3969FC 0%, #2A49FF 100%));
+    border: none;
+    color: white;
+    padding: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Mulish';
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+}
