@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useState } from "react";
+import React from "react";
+import { useEffect, useState } from "react";
 
 export default function ReporteAtenciones() {
   const [reportes, setReportes] = useState([
@@ -12,17 +13,19 @@ export default function ReporteAtenciones() {
       tipoAtencion: "",
       canalAtencion: "",
       descripcionAtencion: "",
-    }
+    },
   ]);
 
-  axios
-    .get("http://localhost:3001/atenciones")
-    .then((response) => {
-      setReportes(response.data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/atenciones")
+      .then((response) => {
+        setReportes(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   const tabla = reportes.map((reporte, i) => (
     <tr key={reporte.id}>
