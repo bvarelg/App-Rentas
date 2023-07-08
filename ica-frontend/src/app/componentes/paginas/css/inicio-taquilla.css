@@ -1,25 +1,15 @@
 div.contenido {
-    display: block !important;
-    justify-content: center;
-    position: relative !important;
-    margin: 0% 20% 0% 40%;
-    
+  text-align: center;
 }
-    
+
 h1.funcionario {
-       
-    font-family: 'Mulish' sans-serif;
+  font-family: "Mulish" sans-serif;
+  padding: 30px;
 }
 
 div.identificador-log {
-    
-    position: block;
-    display: inline-block;
-    margin-left: auto !important;
-    margin-top: 20px;
-    
+  position: block;
+  display: inline-block;
+  margin-left: auto !important;
+  margin-top: 20px;
 }
-
-
-    
-    

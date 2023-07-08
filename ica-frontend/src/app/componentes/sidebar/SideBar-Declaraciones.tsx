@@ -1,13 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "./Sidebar.css"
+import "./Sidebar.css";
 import Image from "next/image";
 import LogoAppRentas from "../../assets/img/LogoAppRentas.png";
-import  '../paginas/css/inicio-taquilla.css'
+import "../paginas/css/inicio-taquilla.css";
 import router from "next/router";
 
-function Sidebar() {
+function SidebarDeclaraciones() {
   return (
     <div>
       <div className="grid">
@@ -23,36 +23,36 @@ function Sidebar() {
             </div>
             <div className="appRentas">
               <h4>App Rentas</h4>
-              <p>Taquilla</p>
+              <a className="nav-link px-2" onClick={() => router.push("declaraciones")}>Declaraciones</a>
             </div>
           </div>
 
           <div className="menus">
             <ul>
               <li>
-                <a onClick={() => router.push("atenciones")} className="nav-link px-2" >
+                <a
+                  onClick={() => router.push("atenciones-declaraciones")}
+                  className="nav-link px-2"
+                >
                   <i className="bi bi-file-earmark-person fa-xl" />{" "}
                   <span className="ms-1 d-none d-sm-inline">
                     Registro de atenciones
                   </span>
                 </a>
               </li>
-              <li>
-                <a className="nav-link px-2">
-                  <i className="bi bi-file-earmark-text fa-xl" />{" "}
-                  <span className="ms-1 d-none d-sm-inline">Anuales</span>
-                </a>
-              </li>
+
               <li>
                 <a className="nav-link px-2">
                   <i className="bi bi-files fa-xl" />{" "}
-                  <span className="ms-1 d-none d-sm-inline">Bimestrales</span>
+                  <span className="ms-1 d-none d-sm-inline">
+                    Anuales
+                  </span>
                 </a>
               </li>
               <li>
                 <a className="nav-link px-2">
                   <i className="bi bi-file-plus fa-xl" />{" "}
-                  <span className="ms-1 d-none d-sm-inline">Ingreso RIT</span>
+                  <span className="ms-1 d-none d-sm-inline">Reaforos</span>
                 </a>
               </li>
               <li>
@@ -62,7 +62,10 @@ function Sidebar() {
                 </a>
               </li>
               <li>
-                <a onClick={() => router.push("reportes")} className="nav-link px-2" >
+                <a
+                  onClick={() => router.push("reportes")}
+                  className="nav-link px-2"
+                >
                   <i className="bi bi-cloud-download fa-xl" />{" "}
                   <span className="ms-1 d-none d-sm-inline">Reportes</span>
                 </a>
@@ -70,28 +73,23 @@ function Sidebar() {
             </ul>
           </div>
           <div className="home">
-            <a onClick={() => router.push("home")} className="nav-link px-2 " >
+            <a onClick={() => router.push("home")} className="nav-link px-2 ">
               <i className={"bi bi-house"} />
               {"  "}
               <span className="ms-1 d-none d-sm-inline">Home</span>
             </a>
           </div>
           <div className="cerrar-sesión">
-            <a onClick={() => router.push("login")} className="nav-link px-2 " >
+            <a onClick={() => router.push("login")} className="nav-link px-2 ">
               <i className={"bi bi-x-circle"} />
               {"  "}
               <span className="ms-1 d-none d-sm-inline">Cerrar sesión</span>
             </a>
           </div>
-
         </div>
-        
       </div>
     </div>
   );
 }
 
-          
-
-
-export default Sidebar;
+export default SidebarDeclaraciones;

@@ -3,6 +3,7 @@ div.reg-atenciones {
     grid-template-columns: max-content auto;
     margin-left: 0px;
     overflow: auto;
+    /* border: red solid 1px; */
 }
 
 div.formulario form {
@@ -37,7 +38,7 @@ form.form input {
     border: darkgray solid 1px;
     height: 40px;
     width: 250px;
-    
+    font-family: 'Mulish', sans-serif;
 }
 
 select {
@@ -64,7 +65,7 @@ textarea.descripcion {
 }
 
 div.boton input {
-    
+    text-align: center;
     color: white !important;
     font-family: 'Mulish', sans-serif;
     font-weight: bold;

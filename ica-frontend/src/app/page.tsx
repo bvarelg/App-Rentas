@@ -25,7 +25,9 @@ export default function App() {
         <Route path="/taquilla-ica" element={<InicioTaquilla />} />
         <Route path="/inscripciones" element={<InicioInscripciones />} />
         <Route path="/declaraciones" element={<InicioDeclaraciones />} />
-        <Route path="/atenciones" element={<RegistroAtenciones />} />
+        <Route path="/atenciones-taquilla" element={<RegistroAtenciones />} />
+        <Route path="/atenciones-inscripciones" element={<RegistroAtenciones />} />
+        <Route path="/atenciones-declaraciones" element={<RegistroAtenciones />} />
         <Route path="/reportes" element={<ReporteAtenciones /> } />
       </Routes>
     </BrowserRouter>

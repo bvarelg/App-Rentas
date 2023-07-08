@@ -1,9 +1,8 @@
 import * as React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import "../sidebar/SideBar";
-import SideBar from "../sidebar/SideBar";
 import "../formularios/css/registro-atenciones.css";
 import { post } from "@/app/httprequest/httprequest";
+
 
 enum TipologiaEnum {
   Factura = "Facturas",
@@ -40,15 +39,10 @@ export default function RegistroAtenciones(this: any) {
   const onSubmit: SubmitHandler<FormData> = (data) => {
     post(url, { ...data }, cbResponse);
   };
- 
 
   return (
-    <div className="reg-atenciones">
+    <div>
       <div>
-        <SideBar />
-      </div>
-
-      <div className="formulario">
         <h1 className="titulo">Registro de atenciones</h1>
 
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -80,9 +74,12 @@ export default function RegistroAtenciones(this: any) {
             </div>
 
             <div>
-            <label className="inputs">Tipología</label>
-            <br />
-              <select className="lista-tipologias" {...register("tipoAtencion")}>
+              <label className="inputs">Tipología</label>
+              <br />
+              <select
+                className="lista-tipologias"
+                {...register("tipoAtencion")}
+              >
                 <option value="Factura">Facturas</option>
                 <option value="Inscripciones">Inscripciones</option>
                 <option value="Declaraciones">Declaraciones</option>
@@ -90,12 +87,14 @@ export default function RegistroAtenciones(this: any) {
                 <option value="Asesoría">Asesoría</option>
               </select>
             </div>
-              
 
             <div>
               <label className="inputs">Canal de atención</label>
               <br />
-              <select className="lista-tipologias" {...register("canalAtencion")}>
+              <select
+                className="lista-tipologias"
+                {...register("canalAtencion")}
+              >
                 <option value="Presencial">Presencial</option>
                 <option value="Telefónico">Telefónico</option>
                 <option value="Digital">Digital</option>
@@ -119,12 +118,10 @@ export default function RegistroAtenciones(this: any) {
               <input type="submit" value="Registrar" />
             </div>
           </div>
-
-
         </form>
       </div>
     </div>
   );
 }
 
-// export default RegistroAtenciones;
+

@@ -1,14 +1,24 @@
 import React from "react";
+import SidebarInscripciones from "../sidebar/SideBar-Inscripciones";
+import "./css/inicio-taquilla.css";
 
 
-const InicioInscripciones = () => {
+export default function InicioInscripciones () {
   
 
   return (
-    <div>
-        <h1 className="bienvenida">{sessionStorage.getItem("nombre")}</h1>
+    <div className="grid">
+
+      <div>
+        <SidebarInscripciones />
+      </div>
+
+      <div className="contenido">
+        <h1 className="funcionario">Inicio Inscripciones</h1>
+        <h3>{sessionStorage.getItem("nombre")}</h3>
+      </div>
+
     </div>
   );
 };
 
-export default InicioInscripciones;
