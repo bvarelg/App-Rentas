@@ -7,25 +7,33 @@ import InputText from "@/app/componentes/formularios/input_texto";
 import { useRouter } from "next/navigation";
 import "@/app/globals.css";
 import BotonPrincipal from "@/app/componentes/formularios/boton_principal";
+import router from "next/router";
+
 
 
 export default function Login() {
   const router = useRouter()
-  // React.useEffect(() => {
-  //   if (sessionStorage.getItem("token") !== undefined) {
-  //     router.push("/home");
-  //   }
-  // })
+  useEffect(() => {
+    if (sessionStorage.getItem("token") == undefined) {
+      router.push("/home");
+    }
+  })
   
   const [correo, setCorreo] = useState("");
   const [contrasena, setContrasena] = useState("");
-
+  const [error, setError] = useState(false);
+  
   function handleInput(valor: string, name: string) {
     if (name === "correo") {
       setCorreo(valor);
     } else {
       setContrasena(valor);
     }
+    if (name === "" || contrasena === "") {
+      setError(true);
+      return
+    }
+    setError(false);
   }
   
   
@@ -56,6 +64,8 @@ export default function Login() {
         
 
   };
+
+  
   return (
     <div className="Login">
       <div className="contenedor-principal">
@@ -88,8 +98,9 @@ export default function Login() {
             hint="Ingresa tu contraseña"
             type="password"
             handleInput={handleInput}
-          />
+            />
           <br />
+          {error && <p>Todos los campos son obligatorios</p>}
           <BotonPrincipal texto="Iniciar sesión" callBack={login} />
           <br />
           <br />

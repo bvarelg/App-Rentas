@@ -39,9 +39,9 @@ ul li i{
 
 div.grid {
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: max-content auto !important;
     margin-left: 0px;
-    
+    overflow: auto;
 }
 
 div.sidebar {

@@ -4,11 +4,10 @@ import { UsuariosService } from 'src/usuarios/usuarios.service';
 
 @Controller('autenticacion')
 export class AutenticacionController {
-    constructor(private authService: UsuariosService) { }
+  constructor(private authService: UsuariosService) {}
 
-    @Post("login")
-    async login(@Body() authDto: AuthDto) : Promise<any> {
-        return this.authService.queryLogin(authDto)
-        
-    }
+  @Post('login')
+  async login(@Body() authDto: AuthDto): Promise<any> {
+    return this.authService.queryLogin(authDto);
+  }
 }

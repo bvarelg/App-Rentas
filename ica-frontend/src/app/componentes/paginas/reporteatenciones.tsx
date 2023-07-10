@@ -1,6 +1,8 @@
 import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function ReporteAtenciones() {
   const [reportes, setReportes] = useState([
@@ -37,11 +39,21 @@ export default function ReporteAtenciones() {
       <td>{reporte.tipoAtencion}</td>
       <td>{reporte.canalAtencion}</td>
       <td>{reporte.descripcionAtencion}</td>
+      <td>
+        <button className="btn btn-outline-warning">
+          <i className="bi bi-pencil-square"></i>
+        </button>
+        &nbsp;
+        <button className="btn btn-outline-danger">
+          <i className="bi bi-trash3"></i>
+        </button>
+      </td>
     </tr>
   ));
 
   return (
-    <div>
+    <div className="overflow-scroll m-3">
+      
       <table
         className="table
              table-striped table-borded table-hover"

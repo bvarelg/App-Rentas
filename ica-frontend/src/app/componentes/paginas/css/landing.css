@@ -1,0 +1,26 @@
+html {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #012677 4.17%, rgba(250, 47, 1, 0.205) 98.67%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+body{
+    background-color: transparent !important;
+}
+
+h1.tituloapp {
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 80px;
+}
+
+div.entrar {
+    display: flex;
+    justify-content: center;
+    
+}

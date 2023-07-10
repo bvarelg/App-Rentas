@@ -77,7 +77,7 @@ function SidebarTaquilla() {
             </a>
           </div>
           <div className="cerrar-sesión">
-            <a onClick={() => router.push("login")} className="nav-link px-2 " >
+            <a onClick={() => router.push("/")} className="nav-link px-2 " >
               <i className={"bi bi-x-circle"} />
               {"  "}
               <span className="ms-1 d-none d-sm-inline">Cerrar sesión</span>

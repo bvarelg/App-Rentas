@@ -10,7 +10,7 @@ import InicioDeclaraciones from "./componentes/paginas/inicio-declaraciones";
 import RegistroAtenciones from "./componentes/formularios/registro-atenciones";
 import InicioTaquilla from "./componentes/paginas/iniciotaquilla";
 import ReporteAtenciones from "./componentes/paginas/reporteatenciones";
-
+import Landing from "@/pages/landing";
 
 
 
@@ -18,6 +18,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route index element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/recuperacion" element={<Recuperacion />} />

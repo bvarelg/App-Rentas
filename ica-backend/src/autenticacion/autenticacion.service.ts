@@ -5,13 +5,8 @@ import { UsuariosService } from 'src/usuarios/usuarios.service';
 
 @Injectable()
 export class AutenticacionService {
-
-
-    constructor(
-        @InjectModel(Usuario)
-        private readonly usuarioModel: typeof Usuario) { }
-
-
-
-    
+  constructor(
+    @InjectModel(Usuario)
+    private readonly usuarioModel: typeof Usuario,
+  ) {}
 }
