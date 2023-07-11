@@ -14,8 +14,9 @@ import router from "next/router";
 export default function Login() {
   const router = useRouter()
   useEffect(() => {
-    if (sessionStorage.getItem("token") == undefined) {
+    if (sessionStorage.getItem("token") !== null) {
       router.push("/home");
+      console.log(sessionStorage.getItem("token"));
     }
   })
   
@@ -53,7 +54,7 @@ export default function Login() {
         correo: correo,
         contrasena: contrasena,
       })
-      .then(function (response) {
+     .then(function (response) {
         SessionDataStorage(response.data.access_token, "token")
         SessionDataStorage(response.data.nombre, "nombre")
         router.push("/home")

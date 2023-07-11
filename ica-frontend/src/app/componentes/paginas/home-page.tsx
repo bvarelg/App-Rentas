@@ -21,10 +21,11 @@ export default function HomePage() {
         }
   }, []);
   
-    
+  
+
   return (
     <div>
-      <h1 className="bienvenida">Hola {username || 'Usuario'}</h1>
+      <h1 className="bienvenida">Hola {username || ''}</h1>
       <div className="contenedor-modulos">
         <a onClick={() => router.push("taquilla-ica")} className="modulos">
           <ModuloTaquilla />

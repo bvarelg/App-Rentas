@@ -5,9 +5,25 @@ import "./Sidebar.css";
 import Image from "next/image";
 import LogoAppRentas from "../../assets/img/LogoAppRentas.png";
 import "../paginas/css/inicio-taquilla.css";
-import router from "next/router";
+import router, { useRouter } from "next/router";
 
 function SidebarInscripciones() {
+  //Funciones para cerrar sesion con evento onClick, vaciando los datos en sessionStorage al salir.
+  const router = useRouter()
+  const cerrarSesion = document.getElementById('cerrarSesion');
+  
+  cerrarSesion?.addEventListener("click", salir);
+  cerrarSesion?.addEventListener("click", borrarSesion);
+    
+  function salir(this: HTMLAnchorElement): void {
+    router.push("/");
+  }
+  
+    
+  function borrarSesion(this: HTMLAnchorElement): void {
+    sessionStorage.removeItem('token');
+  }
+  
   return (
     <div>
       <div className="grid">
@@ -80,7 +96,7 @@ function SidebarInscripciones() {
             </a>
           </div>
           <div className="cerrar-sesión">
-            <a onClick={() => router.push("/")} className="nav-link px-2 ">
+            <a id="cerrarSesion" className="nav-link px-2 ">
               <i className={"bi bi-x-circle"} />
               {"  "}
               <span className="ms-1 d-none d-sm-inline">Cerrar sesión</span>
