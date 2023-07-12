@@ -8,19 +8,10 @@ import "../paginas/css/inicio-taquilla.css";
 import router, { useRouter } from "next/router";
 
 function SidebarInscripciones() {
-  //Funciones para cerrar sesion con evento onClick, vaciando los datos en sessionStorage al salir.
+  //Función para cerrar sesion con evento onClick, vaciando los datos en sessionStorage al salir.
   const router = useRouter()
-  const cerrarSesion = document.getElementById('cerrarSesion');
-  
-  cerrarSesion?.addEventListener("click", salir);
-  cerrarSesion?.addEventListener("click", borrarSesion);
-    
-  function salir(this: HTMLAnchorElement): void {
-    router.push("/");
-  }
-  
-    
-  function borrarSesion(this: HTMLAnchorElement): void {
+  function cerrarSesion(this: HTMLAnchorElement): void {
+    router.push('/');
     sessionStorage.removeItem('token');
   }
   
@@ -96,7 +87,7 @@ function SidebarInscripciones() {
             </a>
           </div>
           <div className="cerrar-sesión">
-            <a id="cerrarSesion" className="nav-link px-2 ">
+            <a id="cerrarSesion" className="nav-link px-2 " onClick={cerrarSesion} >
               <i className={"bi bi-x-circle"} />
               {"  "}
               <span className="ms-1 d-none d-sm-inline">Cerrar sesión</span>

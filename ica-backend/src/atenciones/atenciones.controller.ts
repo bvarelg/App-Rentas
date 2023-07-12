@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Patch, Post, Put } from '@nestjs/common';
 import { AtencionesService } from './atenciones.service';
 import { Atencion } from './modelos/atenciones';
 import { AtencionDto, UpdateAtencionDto } from './dto/atencion-dto';
@@ -18,7 +18,7 @@ export class AtencionesController {
     return this.service.insertarAtencion(dto);
   }
 
-  @Patch('/:id')
+  @Put('/:id')
   update(
     @Body() updateAtencionDto: UpdateAtencionDto,
     @Param('id') id: number,
